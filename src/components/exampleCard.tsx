@@ -64,10 +64,11 @@ export default function SimpleCard() {
       <CardHeader title={<Typography variant="h5" component="h2">Find Doggo</Typography>}></CardHeader>
       <CardContent className={classes.content}>
         <TextField 
-        onChange={(e) => setDogName(e.target.value)} 
-        className={classes.input} 
-        label="Type a dog breed..." 
-        variant="outlined"></TextField>
+          onChange={(e) => setDogName(e.target.value)} 
+          className={classes.input} 
+          label="Type a dog breed..." 
+          variant="outlined">
+        </TextField>
         <Button onClick={() => getDog()} className={classes.button} variant="contained" size="large" color="primary"> 
           {isLoading? <CircularProgress color="secondary"></CircularProgress> : <Typography>get {dogName} doggo</Typography>}
         </Button>
